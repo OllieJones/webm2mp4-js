@@ -1,0 +1,68 @@
+# These files are text and should be normalized (convert crlf =&gt; lf)
+*.cs      text diff=csharp
+*.c       text
+*.h       text
+*.config  text
+*.xml     text
+*.refresh text
+*.sql     text
+*.xaml    text
+*.csproj  text
+*.sln     text
+*.tt      text
+*.ps1     text
+*.cmd     text
+*.msbuild text
+*.md      text
+*.bat     text
+*.reg     text
+*.vcproj  text 
+*.vcxproj text
+*.asp     text
+*.aspx    text
+*.vbs     text
+*.disco   text
+*.discomap  text
+*.wsdl    text
+*.xml     text
+*.mak     text
+*.js      text
+*.less    text
+*.css     text
+*.html    text
+*.htm     text 
+*.json    text
+*.txt     text
+*.publishproj  text
+
+
+
+# Images should be treated as binary
+# (binary is a macro for -text -diff)
+*.webm    binary
+*.mkv     binary
+*.mp4     binary
+*.h264    binary
+*.avi     binary
+*.png     binary
+*.jpeg    binary
+*.jpg     binary
+*.gif     binary
+*.ico     binary
+*.sdf     binary
+*.snk     binary
+*.dmg     binary
+*.pkg     binary
+*.zip     binary
+*.xpi     binary
+*.safariextz binary
+*.exe     binary
+*.dll     binary
+*.pdb     binary
+# font files
+*.woff    binary
+*.otf     binary
+*.eot     binary
+*.ttf     binary
+
+

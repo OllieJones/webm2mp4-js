@@ -1,0 +1,33 @@
+{
+  "name": "webm2mp4-js",
+  "version": "0.0.1",
+  "description": "Convert webm data streams containing h.264 video to fragmented mp4",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OllieJones/webm2mp4-js.git"
+  },
+  "keywords": [
+    "matroska",
+    "webm",
+    "mp4",
+    "mov",
+    "video"
+  ],
+  "author": "Oliver Jones <olliejones@gmail.com> (https://plumislandmedia.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OllieJones/webm2mp4-js/issues"
+  },
+  "homepage": "https://github.com/OllieJones/webm2mp4-js#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.16",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "cross-blob": "^2.0.0",
+    "jest": "^26.6.3",
+    "standard": "^16.0.3"
+  }
+}
