@@ -119,3 +119,7 @@ $RECYCLE.BIN/
 # Unix backup files
 *~
 
+*.mp4
+*.webm
+*.mkv
+__tests__/__test_data__/
