@@ -2,7 +2,7 @@
 
 import { expect, test } from '@jest/globals'
 
-const fmp4 = require('../index.js')
+import * as fmp4 from '../src/box.js'
 
 const mdiaNewSample = fmp4.Box.makeArray('00 00 00 08 6d 64 69 61')
 const mdiaMdhdSample = fmp4.Box.makeArray(`

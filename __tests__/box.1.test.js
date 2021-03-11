@@ -1,8 +1,7 @@
 'use strict'
 
 import { expect, test } from '@jest/globals'
-
-const fmp4 = require('../index.js')
+import * as fmp4 from '../src/box.js'
 
 const expected = fmp4.Box.makeArray('00 00 00 1c 66 74 79 70 6d 70 34 32 00 00 00 01 69 73 6f 6d 6d 70 34 32 61 76 63 31')
 

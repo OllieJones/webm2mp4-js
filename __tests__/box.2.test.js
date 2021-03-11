@@ -2,7 +2,7 @@
 
 import { expect, test } from '@jest/globals'
 
-const fmp4 = require('../index.js')
+import * as fmp4 from '../src/box.js'
 
 const allNewMoov = fmp4.Box.makeArray('00 00 00 1c 66 74 79 70 6d 70 34 32 00 00 00 01 69 73 6f 6d 6d 70 34 32 61 76 63 31 00 00 00 08 6d 6f 6f 76 ')
 const newMoov = fmp4.Box.makeArray('00 00 00 08 6d 6f 6f 76 ')

@@ -2,8 +2,8 @@
 
 import { expect, test } from '@jest/globals'
 
-const h264tools = require('h264-interp-utils')
-const fmp4 = require('../index.js')
+import * as h264tools from 'h264-interp-utils'
+import * as fmp4 from '../src/box.js'
 
 const avc1Only = fmp4.Box.makeArray(
   `

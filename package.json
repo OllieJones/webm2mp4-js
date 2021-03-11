@@ -1,6 +1,6 @@
 {
   "name": "webm2mp4-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert webm data streams containing h.264 video to fragmented mp4",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,10 @@
     "webm",
     "mp4",
     "mov",
-    "video"
+    "video",
+    "BMFF",
+    "QuickTime",
+    "h264"
   ],
   "author": "Oliver Jones <olliejones@gmail.com> (https://plumislandmedia.net/)",
   "license": "MIT",
@@ -25,12 +28,14 @@
   "homepage": "https://github.com/OllieJones/webm2mp4-js#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.12.16",
+    "@jest/globals": "^26.6.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cross-blob": "^2.0.0",
     "jest": "^26.6.3",
     "standard": "^16.0.3"
   },
   "dependencies": {
+    "ebml": "^3.0.0",
     "h264-interp-utils": "^1.0.3"
   }
 }

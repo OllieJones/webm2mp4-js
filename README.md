@@ -1,4 +1,4 @@
-# fragmented-mp4 [![Tests](https://github.com/OllieJones/webm2mp4-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/OllieJones/fragmented-mp4-output/actions/workflows/node.js.yml) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
+# webm2mp4-js [![Tests](https://github.com/OllieJones/webm2mp4-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/OllieJones/fragmented-mp4-output/actions/workflows/node.js.yml) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
 
 [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) emits
 media data stream boxed in the 
@@ -12,6 +12,11 @@ This is handy, because the [Media Source Extension](https://developer.mozilla.or
 cannot consume Matroska, but it can consume fragmented MP4.  Once we have that MP4, 
 we can feed it to MSE chunk by chunk with the 
 [SourceBuffer.appendBuffer()](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBuffer) API. 
+
+The output data stream is intended to comply with
+the W3C's 
+[ISO Base Media File Format specification](https://www.w3.org/2013/12/byte-stream-format-registry/isobmff-byte-stream-format.html#iso-media-segments).
+
 
 ## Install
 
