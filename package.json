@@ -1,6 +1,6 @@
 {
   "name": "webm2mp4-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert webm data streams containing h.264 video to fragmented mp4",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,8 @@
     "cross-blob": "^2.0.0",
     "jest": "^26.6.3",
     "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "h264-interp-utils": "^1.0.3"
   }
 }

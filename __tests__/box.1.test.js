@@ -84,3 +84,20 @@ test('ftyp raw', done => {
   streamBox.end()
   expect(streamBox.peek().byteLength).toEqual(0)
 })
+
+test('ftyp helper function', done => {
+  const streamBox = new fmp4.Box(null, null, { type: 'video/webm; codecs="avc1.42C01E"' })
+  streamBox.ondataavailable = function (event) {
+    event.data.arrayBuffer()
+      .then(buffer => {
+        const arr = new Uint8Array(buffer)
+        expect(arr).toEqual(expected)
+        done()
+      })
+  }
+
+  fmp4.ftyp(streamBox)
+  expect(streamBox.peek()).toEqual(expected)
+  streamBox.end()
+  expect(streamBox.peek().byteLength).toEqual(0)
+})

@@ -1,0 +1,4417 @@
+[ftyp] size=8+20
+  major_brand = mp42
+  minor_version = 1
+  compatible_brand = isom
+  compatible_brand = mp42
+  compatible_brand = avc1
+[moov] size=8+642
+  [mvhd] size=12+96
+    timescale = 1000
+    duration = 0
+    duration(ms) = 0
+  [trak] size=8+470
+    [tkhd] size=12+80, flags=7
+      enabled = 1
+      id = 2
+      duration = 0
+      volume = 0
+      layer = 0
+      alternate_group = 0
+      matrix_0 = 1.000000
+      matrix_1 = 0.000000
+      matrix_2 = 0.000000
+      matrix_3 = 0.000000
+      matrix_4 = 1.000000
+      matrix_5 = 0.000000
+      matrix_6 = 0.000000
+      matrix_7 = 0.000000
+      matrix_8 = 16384.000000
+      width = 368.000000
+      height = 668.000000
+    [mdia] size=8+370
+      [mdhd] size=12+20
+        timescale = 15000
+        duration = 0
+        duration(ms) = 0
+        language = ```
+      [hdlr] size=12+41
+        handler_type = vide
+        handler_name = Bento4 Video Handler
+      [minf] size=8+277
+        [vmhd] size=12+8, flags=1
+          graphics_mode = 0
+          op_color = 0000,0000,0000
+        [dinf] size=8+28
+          [dref] size=12+16
+            [url ] size=12+0, flags=1
+              location = [local to file]
+        [stbl] size=8+213
+          [stsd] size=12+133
+            entry-count = 1
+            [avc1] size=8+121
+              data_reference_index = 1
+              width = 368
+              height = 668
+              compressor = h264
+              [avcC] size=8+35
+                Configuration Version = 1
+                Profile = Main
+                Profile Compatibility = 40
+                Level = 30
+                NALU Length Size = 4
+                Sequence Parameter = [27 4d 40 1e a9 18 2e 0a bf 78 0b 70 60 10 6e c2 b5 ef 7c 04]
+                Picture Parameter = [28 fe 09 c8]
+          [stsz] size=12+8
+            sample_size = 0
+            sample_count = 0
+          [stsc] size=12+4
+            entry_count = 0
+          [stts] size=12+4
+            entry_count = 0
+          [stco] size=12+4
+            entry_count = 0
+  [mvex] size=8+48
+    [mehd] size=12+4
+      duration = 0
+    [trex] size=12+20
+      track id = 2
+      default sample description index = 1
+      default sample duration = 0
+      default sample size = 0
+      default sample flags = 0
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 0
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19411
+[mdat] size=8+19411
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 1000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2415
+[mdat] size=8+2415
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 2000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6744
+[mdat] size=8+6744
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 3000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6090
+[mdat] size=8+6090
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 4000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7592
+[mdat] size=8+7592
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 5000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7705
+[mdat] size=8+7705
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 6000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8719
+[mdat] size=8+8719
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 7000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7259
+[mdat] size=8+7259
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 8000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6642
+[mdat] size=8+6642
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 9000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7727
+[mdat] size=8+7727
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 10000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:11461
+[mdat] size=8+11461
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 11000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6622
+[mdat] size=8+6622
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 12000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6647
+      entry 0001 = sample_duration:1000, sample_size:9896
+[mdat] size=8+16543
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 14000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7141
+[mdat] size=8+7141
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 15000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7797
+[mdat] size=8+7797
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 16000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19297
+[mdat] size=8+19297
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 17000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19297
+[mdat] size=8+19297
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 18000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19322
+      entry 0001 = sample_duration:1000, sample_size:5374
+[mdat] size=8+24696
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 20000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8599
+[mdat] size=8+8599
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 21000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8624
+      entry 0001 = sample_duration:1000, sample_size:8027
+[mdat] size=8+16651
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 23000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4148
+[mdat] size=8+4148
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 24000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18913
+[mdat] size=8+18913
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 25000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3679
+[mdat] size=8+3679
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 26000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8514
+[mdat] size=8+8514
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 27000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8539
+      entry 0001 = sample_duration:1000, sample_size:4919
+[mdat] size=8+13458
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 29000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5400
+[mdat] size=8+5400
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 30000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18682
+[mdat] size=8+18682
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 31000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3088
+[mdat] size=8+3088
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 32000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5777
+[mdat] size=8+5777
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 33000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5802
+      entry 0001 = sample_duration:1000, sample_size:8806
+[mdat] size=8+14608
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 35000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5494
+[mdat] size=8+5494
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 36000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5519
+      entry 0001 = sample_duration:1000, sample_size:5145
+[mdat] size=8+10664
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 38000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5813
+[mdat] size=8+5813
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 39000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18785
+[mdat] size=8+18785
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 40000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18785
+[mdat] size=8+18785
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 41000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18608
+[mdat] size=8+18608
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 42000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5035
+[mdat] size=8+5035
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 43000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5060
+      entry 0001 = sample_duration:1000, sample_size:3381
+[mdat] size=8+8441
+[moof] size=8+112
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+88
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 45000
+    [trun] size=12+36, flags=305
+      sample count = 3
+      data offset = 128
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5060
+      entry 0001 = sample_duration:1000, sample_size:3406
+      entry 0002 = sample_duration:1000, sample_size:5683
+[mdat] size=8+14149
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 48000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19041
+[mdat] size=8+19041
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 49000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19881
+[mdat] size=8+19881
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 50000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19881
+[mdat] size=8+19881
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 51000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5390
+[mdat] size=8+5390
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 52000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19491
+[mdat] size=8+19491
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 53000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19491
+[mdat] size=8+19491
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 54000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3060
+[mdat] size=8+3060
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 55000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5968
+[mdat] size=8+5968
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 56000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5993
+      entry 0001 = sample_duration:1000, sample_size:2456
+[mdat] size=8+8449
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 58000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18754
+[mdat] size=8+18754
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 59000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3814
+[mdat] size=8+3814
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 60000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4257
+[mdat] size=8+4257
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 61000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4282
+      entry 0001 = sample_duration:1000, sample_size:2748
+[mdat] size=8+7030
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 63000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19426
+[mdat] size=8+19426
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 64000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19426
+[mdat] size=8+19426
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 65000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3826
+[mdat] size=8+3826
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 66000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6771
+[mdat] size=8+6771
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 67000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6796
+      entry 0001 = sample_duration:1000, sample_size:7434
+[mdat] size=8+14230
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 69000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6956
+[mdat] size=8+6956
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 70000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6981
+      entry 0001 = sample_duration:1000, sample_size:8743
+[mdat] size=8+15724
+[moof] size=8+112
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+88
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 72000
+    [trun] size=12+36, flags=305
+      sample count = 3
+      data offset = 128
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6981
+      entry 0001 = sample_duration:1000, sample_size:8768
+      entry 0002 = sample_duration:1000, sample_size:3928
+[mdat] size=8+19677
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 75000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19519
+[mdat] size=8+19519
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 76000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19519
+[mdat] size=8+19519
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 77000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6037
+[mdat] size=8+6037
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 78000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7118
+[mdat] size=8+7118
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 79000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4508
+[mdat] size=8+4508
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 80000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18306
+[mdat] size=8+18306
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 81000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5509
+[mdat] size=8+5509
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 82000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5101
+[mdat] size=8+5101
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 83000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3828
+[mdat] size=8+3828
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 84000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18798
+[mdat] size=8+18798
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 85000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18798
+[mdat] size=8+18798
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 86000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3981
+[mdat] size=8+3981
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 87000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2221
+[mdat] size=8+2221
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 88000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18811
+[mdat] size=8+18811
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 89000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18811
+[mdat] size=8+18811
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 90000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18057
+[mdat] size=8+18057
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 91000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18210
+[mdat] size=8+18210
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 92000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2717
+[mdat] size=8+2717
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 93000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3693
+[mdat] size=8+3693
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 94000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5117
+[mdat] size=8+5117
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 95000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6107
+[mdat] size=8+6107
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 96000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7186
+[mdat] size=8+7186
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 97000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6506
+[mdat] size=8+6506
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 98000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:9112
+[mdat] size=8+9112
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 99000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6311
+[mdat] size=8+6311
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 100000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7036
+[mdat] size=8+7036
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 101000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7786
+[mdat] size=8+7786
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 102000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18790
+[mdat] size=8+18790
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 103000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18790
+[mdat] size=8+18790
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 104000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4621
+[mdat] size=8+4621
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 105000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6532
+[mdat] size=8+6532
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 106000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8034
+[mdat] size=8+8034
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 107000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8059
+      entry 0001 = sample_duration:1000, sample_size:7808
+[mdat] size=8+15867
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 109000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3446
+[mdat] size=8+3446
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 110000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19907
+[mdat] size=8+19907
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 111000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5463
+[mdat] size=8+5463
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 112000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3640
+[mdat] size=8+3640
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 113000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6045
+[mdat] size=8+6045
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 114000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18149
+[mdat] size=8+18149
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 115000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2424
+[mdat] size=8+2424
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 116000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2449
+      entry 0001 = sample_duration:1000, sample_size:174
+[mdat] size=8+2623
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 118000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19039
+[mdat] size=8+19039
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 119000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19039
+[mdat] size=8+19039
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 120000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4361
+[mdat] size=8+4361
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 121000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6495
+[mdat] size=8+6495
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 122000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8432
+[mdat] size=8+8432
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 123000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6296
+[mdat] size=8+6296
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 124000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6321
+      entry 0001 = sample_duration:1000, sample_size:8337
+[mdat] size=8+14658
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 126000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6526
+[mdat] size=8+6526
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 127000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18728
+[mdat] size=8+18728
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 128000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18728
+[mdat] size=8+18728
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 129000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18116
+[mdat] size=8+18116
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 130000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18116
+[mdat] size=8+18116
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 131000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3895
+[mdat] size=8+3895
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 132000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8271
+[mdat] size=8+8271
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 133000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:12907
+[mdat] size=8+12907
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 134000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3276
+[mdat] size=8+3276
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 135000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18037
+[mdat] size=8+18037
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 136000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18037
+[mdat] size=8+18037
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 137000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18351
+[mdat] size=8+18351
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 138000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3201
+[mdat] size=8+3201
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 139000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18175
+[mdat] size=8+18175
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 140000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18175
+[mdat] size=8+18175
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 141000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17259
+[mdat] size=8+17259
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 142000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17259
+[mdat] size=8+17259
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 143000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2985
+[mdat] size=8+2985
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 144000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3010
+      entry 0001 = sample_duration:1000, sample_size:6187
+[mdat] size=8+9197
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 146000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7519
+[mdat] size=8+7519
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 147000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8602
+[mdat] size=8+8602
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 148000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3454
+[mdat] size=8+3454
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 149000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18662
+[mdat] size=8+18662
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 150000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2306
+[mdat] size=8+2306
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 151000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18906
+[mdat] size=8+18906
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 152000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18906
+[mdat] size=8+18906
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 153000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18931
+      entry 0001 = sample_duration:1000, sample_size:3669
+[mdat] size=8+22600
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 155000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19663
+[mdat] size=8+19663
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 156000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19663
+[mdat] size=8+19663
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 157000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19688
+      entry 0001 = sample_duration:1000, sample_size:5250
+[mdat] size=8+24938
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 159000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7785
+[mdat] size=8+7785
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 160000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2222
+[mdat] size=8+2222
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 161000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19573
+[mdat] size=8+19573
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 162000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4319
+[mdat] size=8+4319
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 163000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18949
+[mdat] size=8+18949
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 164000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2078
+[mdat] size=8+2078
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 165000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2103
+      entry 0001 = sample_duration:1000, sample_size:2489
+[mdat] size=8+4592
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 167000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2930
+[mdat] size=8+2930
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 168000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4425
+[mdat] size=8+4425
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 169000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5534
+[mdat] size=8+5534
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 170000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5559
+      entry 0001 = sample_duration:1000, sample_size:7678
+[mdat] size=8+13237
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 172000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17843
+[mdat] size=8+17843
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 173000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17843
+[mdat] size=8+17843
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 174000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2763
+[mdat] size=8+2763
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 175000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6658
+[mdat] size=8+6658
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 176000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6683
+      entry 0001 = sample_duration:1000, sample_size:3509
+[mdat] size=8+10192
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 178000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19074
+[mdat] size=8+19074
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 179000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19099
+      entry 0001 = sample_duration:1000, sample_size:4140
+[mdat] size=8+23239
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 181000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18752
+[mdat] size=8+18752
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 182000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4191
+[mdat] size=8+4191
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 183000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4429
+[mdat] size=8+4429
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 184000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4454
+      entry 0001 = sample_duration:1000, sample_size:3949
+[mdat] size=8+8403
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 186000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17048
+[mdat] size=8+17048
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 187000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3679
+[mdat] size=8+3679
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 188000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18202
+[mdat] size=8+18202
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 189000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2681
+[mdat] size=8+2681
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 190000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3564
+[mdat] size=8+3564
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 191000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4541
+[mdat] size=8+4541
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 192000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6302
+[mdat] size=8+6302
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 193000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4560
+[mdat] size=8+4560
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 194000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5735
+[mdat] size=8+5735
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 195000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8967
+[mdat] size=8+8967
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 196000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6773
+[mdat] size=8+6773
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 197000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6785
+[mdat] size=8+6785
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 198000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:9027
+[mdat] size=8+9027
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 199000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6064
+[mdat] size=8+6064
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 200000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8251
+[mdat] size=8+8251
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 201000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8118
+[mdat] size=8+8118
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 202000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8261
+[mdat] size=8+8261
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 203000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:9814
+[mdat] size=8+9814
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 204000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:23140
+[mdat] size=8+23140
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 205000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:795
+[mdat] size=8+795
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 206000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:820
+      entry 0001 = sample_duration:1000, sample_size:7961
+[mdat] size=8+8781
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 208000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:9337
+[mdat] size=8+9337
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 209000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6398
+[mdat] size=8+6398
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 210000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8386
+[mdat] size=8+8386
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 211000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19273
+[mdat] size=8+19273
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 212000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4624
+[mdat] size=8+4624
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 213000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7974
+[mdat] size=8+7974
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 214000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7673
+[mdat] size=8+7673
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 215000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7698
+      entry 0001 = sample_duration:1000, sample_size:1767
+[mdat] size=8+9465
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 217000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17926
+[mdat] size=8+17926
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 218000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17926
+[mdat] size=8+17926
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 219000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2568
+[mdat] size=8+2568
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 220000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19303
+[mdat] size=8+19303
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 221000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19303
+[mdat] size=8+19303
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 222000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19328
+      entry 0001 = sample_duration:1000, sample_size:4363
+[mdat] size=8+23691
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 224000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18538
+[mdat] size=8+18538
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 225000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2445
+[mdat] size=8+2445
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 226000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:206
+[mdat] size=8+206
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 227000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18795
+[mdat] size=8+18795
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 228000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2826
+[mdat] size=8+2826
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 229000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3961
+[mdat] size=8+3961
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 230000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6101
+[mdat] size=8+6101
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 231000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6126
+      entry 0001 = sample_duration:1000, sample_size:2791
+[mdat] size=8+8917
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 233000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18748
+[mdat] size=8+18748
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 234000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3329
+[mdat] size=8+3329
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 235000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3354
+      entry 0001 = sample_duration:1000, sample_size:1968
+[mdat] size=8+5322
+[moof] size=8+112
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+88
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 237000
+    [trun] size=12+36, flags=305
+      sample count = 3
+      data offset = 128
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3354
+      entry 0001 = sample_duration:1000, sample_size:1993
+      entry 0002 = sample_duration:1000, sample_size:199
+[mdat] size=8+5546
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 240000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19737
+[mdat] size=8+19737
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 241000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18969
+[mdat] size=8+18969
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 242000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18969
+[mdat] size=8+18969
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 243000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18994
+      entry 0001 = sample_duration:1000, sample_size:3868
+[mdat] size=8+22862
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 245000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7037
+[mdat] size=8+7037
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 246000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7062
+      entry 0001 = sample_duration:1000, sample_size:3282
+[mdat] size=8+10344
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 248000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17849
+[mdat] size=8+17849
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 249000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4104
+[mdat] size=8+4104
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 250000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18654
+[mdat] size=8+18654
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 251000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18679
+      entry 0001 = sample_duration:1000, sample_size:3855
+[mdat] size=8+22534
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 253000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4631
+[mdat] size=8+4631
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 254000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5900
+[mdat] size=8+5900
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 255000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5393
+[mdat] size=8+5393
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 256000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5418
+      entry 0001 = sample_duration:1000, sample_size:2228
+[mdat] size=8+7646
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 258000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18977
+[mdat] size=8+18977
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 259000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4436
+[mdat] size=8+4436
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 260000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17636
+[mdat] size=8+17636
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 261000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:17636
+[mdat] size=8+17636
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 262000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3121
+[mdat] size=8+3121
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 263000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5863
+[mdat] size=8+5863
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 264000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5888
+      entry 0001 = sample_duration:1000, sample_size:7594
+[mdat] size=8+13482
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 266000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19251
+[mdat] size=8+19251
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 267000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:4095
+[mdat] size=8+4095
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 268000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7253
+[mdat] size=8+7253
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 269000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7136
+[mdat] size=8+7136
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 270000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:9198
+[mdat] size=8+9198
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 271000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3961
+[mdat] size=8+3961
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 272000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5542
+[mdat] size=8+5542
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 273000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6164
+[mdat] size=8+6164
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 274000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6189
+      entry 0001 = sample_duration:1000, sample_size:6833
+[mdat] size=8+13022
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 276000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6719
+[mdat] size=8+6719
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 277000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5793
+[mdat] size=8+5793
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 278000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7183
+[mdat] size=8+7183
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 279000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18685
+[mdat] size=8+18685
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 280000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18710
+      entry 0001 = sample_duration:1000, sample_size:4353
+[mdat] size=8+23063
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 282000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18270
+[mdat] size=8+18270
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 283000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18859
+[mdat] size=8+18859
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 284000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3329
+[mdat] size=8+3329
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 285000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3354
+      entry 0001 = sample_duration:1000, sample_size:5608
+[mdat] size=8+8962
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 287000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19136
+[mdat] size=8+19136
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 288000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19136
+[mdat] size=8+19136
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 289000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3064
+[mdat] size=8+3064
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 290000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6977
+[mdat] size=8+6977
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 291000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7923
+[mdat] size=8+7923
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 292000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:7948
+      entry 0001 = sample_duration:1000, sample_size:3219
+[mdat] size=8+11167
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 294000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19538
+[mdat] size=8+19538
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 295000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19538
+[mdat] size=8+19538
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 296000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3277
+[mdat] size=8+3277
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 297000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:11491
+[mdat] size=8+11491
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 298000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:31667
+[mdat] size=8+31667
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 299000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:31682
+[mdat] size=8+31682
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 300000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:31707
+      entry 0001 = sample_duration:1000, sample_size:10473
+[mdat] size=8+42180
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 302000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6047
+[mdat] size=8+6047
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 303000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:264
+[mdat] size=8+264
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 304000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:22051
+[mdat] size=8+22051
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 305000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8576
+[mdat] size=8+8576
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 306000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:8366
+[mdat] size=8+8366
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 307000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:5703
+[mdat] size=8+5703
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 308000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:313
+[mdat] size=8+313
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 309000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:33720
+[mdat] size=8+33720
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 310000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:33720
+[mdat] size=8+33720
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 311000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:19098
+[mdat] size=8+19098
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 312000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:11529
+[mdat] size=8+11529
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 313000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:720
+[mdat] size=8+720
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 314000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:24386
+[mdat] size=8+24386
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 315000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:24386
+[mdat] size=8+24386
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 316000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:6386
+[mdat] size=8+6386
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 317000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:26241
+[mdat] size=8+26241
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 318000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:26241
+[mdat] size=8+26241
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 319000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3498
+[mdat] size=8+3498
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 320000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3523
+      entry 0001 = sample_duration:1000, sample_size:3157
+[mdat] size=8+6680
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 322000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:2712
+[mdat] size=8+2712
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 323000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:25461
+[mdat] size=8+25461
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 324000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:9598
+[mdat] size=8+9598
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 325000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3749
+[mdat] size=8+3749
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 326000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:3774
+      entry 0001 = sample_duration:1000, sample_size:6330
+[mdat] size=8+10104
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 328000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:32550
+[mdat] size=8+32550
+[moof] size=8+96
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+72
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 329000
+    [trun] size=12+20, flags=305
+      sample count = 1
+      data offset = 112
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18559
+[mdat] size=8+18559
+[moof] size=8+104
+  [mfhd] size=12+4
+    sequence number = 1
+  [traf] size=8+80
+    [tfhd] size=12+8, flags=20020
+      track ID = 2
+      default sample flags = 1010000
+    [tfdt] size=12+8, version=1
+      base media decode time = 330000
+    [trun] size=12+28, flags=305
+      sample count = 2
+      data offset = 120
+      first sample flags = 2000000
+      entry 0000 = sample_duration:1000, sample_size:18584
+      entry 0001 = sample_duration:1000, sample_size:3489
+[mdat] size=8+22073

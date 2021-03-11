@@ -39,8 +39,7 @@ const hdlrSample = fmp4.Box.makeArray(`
 test('ftyp moov and more', done => {
   const streamBox = new fmp4.Box(null, null, { type: 'video/webm; codecs="avc1.42C01E"' })
 
-  const ftyp = new fmp4.FtypAtom(streamBox).populate()
-  ftyp.end()
+  fmp4.ftyp(streamBox)
   const moov = new fmp4.MoovAtom(streamBox)
   {
     const mvhd = new fmp4.MvhdAtom((moov))

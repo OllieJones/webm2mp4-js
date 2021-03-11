@@ -32,6 +32,7 @@ class Box {
       this.fourcc(fourcc, 'box name')
     }
     this.p.length = 0
+    this.p.childCount = 0
   }
 
   length () {
@@ -105,6 +106,31 @@ class Box {
   }
 
   /**
+   * write a null-terminated string
+   * @param value
+   * @param desc
+   */
+  cString (value, desc) {
+    for (let i = 0; i < value.length; i++) {
+      this.uint8(value.charCodeAt(i))
+    }
+    this.uint8(0)
+  }
+
+  /**
+   * write an unsigned 32-bit integer at the mentioned ptr offset
+   * @param value to write
+   * @param ptr location
+   * @param desc
+   */
+  uint32At (value, ptr, desc) {
+    this.p.buffer[ptr++] = 0xff && (value >> 24)
+    this.p.buffer[ptr++] = 0xff && (value >> 16)
+    this.p.buffer[ptr++] = 0xff && (value >> 8)
+    this.p.buffer[ptr++] = 0xff && (value)
+  }
+
+  /**
    * write a fixed point number, split 16:16
    * @param value
    * @param desc
@@ -133,6 +159,15 @@ class Box {
     return this
   }
 
+  /**
+   * insert a completed child object
+   * @param child
+   */
+  addchild (child) {
+    this.p.childCount++
+    this.uint8(child.p.buffer.subarray(0, child.p.ptr))
+  }
+
   end () {
     if (this.p.ended) throw new Error('cannot end() an atom more than once')
     this.p.ended = true
@@ -146,14 +181,10 @@ class Box {
       this.p.length = 0
     } else {
       /* child item, write the length into the box */
-      let ptr = 0
-      const length = this.p.ptr
-      this.p.buffer[ptr++] = 0xff && (length >> 24)
-      this.p.buffer[ptr++] = 0xff && (length >> 16)
-      this.p.buffer[ptr++] = 0xff && (length >> 8)
-      this.p.buffer[ptr++] = 0xff && (length)
+      this.uint32At(this.p.ptr, 0, 'length')
       /* write the box into the parent box */
-      this.p.parent.uint8(this.p.buffer.subarray(0, this.p.ptr))
+      this.p.parent.addchild(this)
+      /* reset this atom for possible reuse */
       this.p.ptr = 0
       this.p.length = 0
       return this
@@ -186,15 +217,30 @@ class Box {
 class PureContainer extends Box {
 }
 
+class CountedContainer extends Box {
+  itemCountPlaceholder () {
+    this.p.itemCountPtr = this.p.ptr
+    this.uint32(0, 'item count placeholder')
+  }
+
+  end () {
+    if (typeof this.p.itemCountPtr !== 'number') {
+      throw new Error('no item count placeholder')
+    }
+    this.uint32At(this.p.childCount, this.p.itemCountPtr, 'child count')
+    super.end()
+  }
+}
+
 class FtypAtom extends Box {
   constructor (parent, _) {
     super('ftyp', parent, {})
   }
 
   populate (options) {
-    super.fourcc('mp42', 'major_brand')
-    super.uint32(1, 'minor_version')
-    super.fourcc(['isom', 'mp42', 'avc1'], 'compatible_brand')
+    this.fourcc('mp42', 'major_brand')
+    this.uint32(1, 'minor_version')
+    this.fourcc(['isom', 'mp42', 'avc1'], 'compatible_brand')
     return this
   }
 }
@@ -219,20 +265,20 @@ class MvhdAtom extends Box {
     volume = 0x0100,
     nextTrack = 0xffffffff
   }) {
-    super.uint32(0, 'flags')
-    super.uint32(creationTime, 'creationTime')
-    super.uint32(modificationTime, 'notificationTime')
-    super.uint32(timeScale, 'timeScale')
-    super.uint32(duration)
-    super.uint32(rate)
-    super.uint16(volume)
-    super.zeros(2, 'reserved1')
-    super.zeros(8, 'reserved2')
-    super.uint32([0x00010000, 0, 0], 'matrix')
-    super.uint32([0, 0x00010000, 0])
-    super.uint32([0, 0, 0x40000000])
-    super.zeros(24, 'predefined')
-    super.uint32(nextTrack, 'nextTrack')
+    this.uint32(0, 'flags')
+    this.uint32(creationTime, 'creationTime')
+    this.uint32(modificationTime, 'notificationTime')
+    this.uint32(timeScale, 'timeScale')
+    this.uint32(duration)
+    this.uint32(rate)
+    this.uint16(volume)
+    this.zeros(2, 'reserved1')
+    this.zeros(8, 'reserved2')
+    this.uint32([0x00010000, 0, 0], 'matrix')
+    this.uint32([0, 0x00010000, 0])
+    this.uint32([0, 0, 0x40000000])
+    this.zeros(24, 'predefined')
+    this.uint32(nextTrack, 'nextTrack')
     return this
   }
 }
@@ -264,23 +310,23 @@ class TkhdAtom extends Box {
   }) {
     const flags =
       (trackEnabled ? 1 : 0) | ((trackInMovie ? 1 : 0) << 1) | ((trackInPreview ? 1 : 0) << 2)
-    super.uint32(flags, 'flags')
-    super.uint32(creationTime, 'creationTime')
-    super.uint32(modificationTime, 'notificationTime')
-    super.uint32(trackId, 'trackId')
-    super.uint32(0, 'reserved1')
-    super.uint32(duration, 'duration')
-    super.uint32(0, 'reserved2')
-    super.uint32(0, 'reserved2')
-    super.uint16(layer, 'layer')
-    super.uint16(alternate, 'alternate')
-    super.uint16(volume, 'volume')
-    super.uint16(0, 'reserved3')
-    super.uint32([0x00010000, 0, 0], 'matrix')
-    super.uint32([0, 0x00010000, 0])
-    super.uint32([0, 0, 0x40000000])
-    super.ufixed32(width, 'width')
-    super.ufixed32(height, 'height')
+    this.uint32(flags, 'flags')
+    this.uint32(creationTime, 'creationTime')
+    this.uint32(modificationTime, 'notificationTime')
+    this.uint32(trackId, 'trackId')
+    this.uint32(0, 'reserved1')
+    this.uint32(duration, 'duration')
+    this.uint32(0, 'reserved2')
+    this.uint32(0, 'reserved2')
+    this.uint16(layer, 'layer')
+    this.uint16(alternate, 'alternate')
+    this.uint16(volume, 'volume')
+    this.uint16(0, 'reserved3')
+    this.uint32([0x00010000, 0, 0], 'matrix')
+    this.uint32([0, 0x00010000, 0])
+    this.uint32([0, 0, 0x40000000])
+    this.ufixed32(width, 'width')
+    this.ufixed32(height, 'height')
     return this
   }
 }
@@ -302,13 +348,13 @@ class MdhdAtom extends Box {
     timeScale,
     duration = 0
   }) {
-    super.uint32(0, 'flags')
-    super.uint32(creationTime, 'creationTime')
-    super.uint32(modificationTime, 'notificationTime')
-    super.uint32(timeScale, 'timeScale')
-    super.uint32(duration, 'duration')
-    super.uint16(0x15e0, 'language') // TODO this is dummy language value ```
-    super.uint16(0, 'reserved')
+    this.uint32(0, 'flags')
+    this.uint32(creationTime, 'creationTime')
+    this.uint32(modificationTime, 'notificationTime')
+    this.uint32(timeScale, 'timeScale')
+    this.uint32(duration, 'duration')
+    this.uint16(0x15e0, 'language') // TODO this is dummy language value ```
+    this.uint16(0, 'reserved')
 
     return this
   }
@@ -326,14 +372,11 @@ class HdlrAtom extends Box {
     type = 'vide',
     name = 'WebM Transboxer'
   }) {
-    super.uint32(0, 'flags')
-    super.uint32(0, 'reserved')
-    super.fourcc(type, 'type')
-    super.zeros(12, 'reserved')
-    for (let i = 0; i < name.length; i++) {
-      this.uint8(name.charCodeAt(i))
-    }
-    super.uint8(0, 'c string null terminator')
+    this.uint32(0, 'flags')
+    this.uint32(0, 'reserved')
+    this.fourcc(type, 'type')
+    this.zeros(12, 'reserved')
+    this.cString(name)
     return this
   }
 }
@@ -357,11 +400,11 @@ class VmhdAtom extends Box {
   }
 
   populate ({ graphicsMode = 0, opColor0 = 0, opColor1 = 0, opColor2 = 0 }) {
-    super.uint32(1, 'flags')
-    super.uint16(graphicsMode, 'graphics transfer mode')
-    super.uint16(opColor0, 'opColor0 red')
-    super.uint16(opColor1, 'opColor1 green')
-    super.uint16(opColor2, 'opColor2 blue')
+    this.uint32(1, 'flags')
+    this.uint16(graphicsMode, 'graphics transfer mode')
+    this.uint16(opColor0, 'opColor0 red')
+    this.uint16(opColor1, 'opColor1 green')
+    this.uint16(opColor2, 'opColor2 blue')
     return this
   }
 }
@@ -376,13 +419,13 @@ class DinfAtom extends Box {
   }
 
   populate (_) {
-    super.uint32(28, 'size')
-    super.fourcc('dref')
-    super.uint32(0, 'flags')
-    super.uint32(1, 'number of references')
-    super.uint32(12, 'size of empty URL item')
-    super.fourcc('url ')
-    super.uint32(1, 'flag')
+    this.uint32(28, 'size')
+    this.fourcc('dref')
+    this.uint32(0, 'flags')
+    this.uint32(1, 'number of references')
+    this.uint32(12, 'size of empty URL item')
+    this.fourcc('url ')
+    this.uint32(1, 'flag')
     return this
   }
 }
@@ -399,20 +442,73 @@ class StblAtom extends PureContainer {
 /**
  *
  */
-class StsdAtom extends Box {
-  constructor (parent, _) {
-    super('vmhd', parent, { initialSize: 150 })
+class StsdAtom extends CountedContainer {
+  constructor (parent, options) {
+    super('stsd', parent, { initialSize: 150 })
   }
 
   populate (options) {
-    super.uint32(0, 'flags')
+    this.uint32(0, 'flags')
+    this.itemCountPlaceholder()
     return this
   }
+}
+
+class Avc1Atom extends Box {
+  constructor (parent, options) {
+    super('avc1', parent, { initialSize: 150 })
+  }
+
+  populate (
+    {
+      width,
+      height,
+      dataReferenceIndex = 1,
+      compressor = 'h264'
+    }) {
+    this.uint32(0, 'reserved')
+    this.uint32(dataReferenceIndex, 'data reference index')
+    this.zeros(16, '??')
+    this.uint16(width, 'width')
+    this.uint16(height, 'height')
+    this.uint32(0x00480000, 'horizResolution')
+    this.uint32(0x00480000, 'VertResolution')
+    this.uint32(0, '???')
+    this.uint16(1, '???')
+    this.uint8(4)
+    this.cString(compressor, 'compressor')
+    this.zeros(27, '???')
+    this.uint8(0x18, '???')
+    this.uint16(0xffff, '???')
+    return this
+  }
+}
+
+class AvcCAtom extends Box {
+  constructor (parent, options) {
+    super('avcC', parent, { initialSize: 60 })
+  }
+
+  populate ({ avcC }) {
+    this.uint8(avcC, 'codec private data')
+    return this
+  }
+}
+
+/**
+ * helper function to create ftyp atom
+ * @param streamBox
+ * @param options
+ * @returns {FtypAtom|undefined}
+ */
+function ftyp (streamBox, options) {
+  return new FtypAtom(streamBox).populate().end()
 }
 
 if (typeof module !== 'undefined') {
   module.exports =
     {
+      ftyp,
       Box,
       FtypAtom,
       MoovAtom,
@@ -426,7 +522,9 @@ if (typeof module !== 'undefined') {
       VmhdAtom,
       DinfAtom,
       StblAtom,
-      StsdAtom
+      StsdAtom,
+      Avc1Atom,
+      AvcCAtom
 
     }
 }
