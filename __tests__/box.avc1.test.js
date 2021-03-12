@@ -88,7 +88,7 @@ test('Avc1 plain', () => {
 
 test('avc1 with avcC', () => {
   const codecPrivate = new h264tools.AvcC({ avcC: codecPrivateArray })
-  const streamBox = new fmp4.Box(null, null,
+  const streamBox = new fmp4.StreamBox(null, null,
     {
       initialSize: 17,
       type: 'video/webm; codecs="avc1.42C01E"'
@@ -97,7 +97,7 @@ test('avc1 with avcC', () => {
   avc1.populate({ width: 368, height: 668 })
   expect(avc1.peek()).toEqual(avc1Only)
   const avcc = new fmp4.AvcCAtom(avc1)
-  avcc.populate({ avcC: codecPrivate.avcC })
+  avcc.populate({ codecPrivate: codecPrivate.avcC })
   avcc.end()
   expect(avc1.peek()).toEqual(avc1avcC)
   avc1.end()
@@ -125,7 +125,7 @@ test('avc1 with avcC, with stuff from sps', () => {
   avc1.populate({ width, height })
   expect(avc1.peek()).toEqual(avc1Only)
   const avcc = new fmp4.AvcCAtom(avc1)
-  avcc.populate({ avcC: codecPrivate.avcC })
+  avcc.populate({ codecPrivate: codecPrivate.avcC })
   avcc.end()
   expect(avc1.peek()).toEqual(avc1avcC)
   avc1.end()

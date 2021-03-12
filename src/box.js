@@ -214,6 +214,18 @@ class Box {
   }
 }
 
+class StreamBox extends Box {
+  flush () {
+    if (typeof this.ondataavailable === 'function') {
+      // eslint-disable-next-line no-undef
+      const data = new Blob([this.p.buffer.subarray(0, this.p.ptr)], { type: this.p.type })
+      this.ondataavailable({ data })
+    }
+    this.p.ptr = 0
+    this.p.length = 0
+  }
+}
+
 class PureContainer extends Box {
 }
 
@@ -489,8 +501,8 @@ class AvcCAtom extends Box {
     super('avcC', parent, { initialSize: 60 })
   }
 
-  populate ({ avcC }) {
-    this.uint8(avcC, 'codec private data')
+  populate ({ codecPrivate }) {
+    this.uint8(codecPrivate, 'codec private data')
     return this
   }
 }
@@ -710,21 +722,35 @@ function ftyp (streamBox, options) {
   return new FtypAtom(streamBox).populate().end()
 }
 
+function moov (streamBox, options, makeTracks, makeTrackExtensions) {
+  const { timeScale } = options
+
+  const moov = new MoovAtom(streamBox)
+  new MvhdAtom((moov)).populate({ timeScale }).end()
+  makeTracks(moov, options)
+  /* Track Extensions (for fragmented) */
+  const mvex = new MvexAtom(moov).populate()
+  new MehdAtom(moov).populate(options).end()
+  makeTrackExtensions(mvex, options)
+  mvex.end()
+  moov.end()
+}
+
 /**
  * helper function to create and populate a trak atom for video
- * @param streamBox
- * @param avccOptions options options for avcc constructor
+ * @param parent
  * @param width
  * @param height
  * @param trackId
  * @param timeScale
  * @param name
+ * @param codecPrivate
  * @returns {*}
  */
-function trakVideo (streamBox, avccOptions,
-  { width, height, trackId = 2, timeScale, name = 'web2mp4-js' }
+function trakVideo (parent,
+  { width, height, trackId = 2, timeScale, name = 'web2mp4-js', codecPrivate }
 ) {
-  const trak = new TrakAtom(streamBox)
+  const trak = new TrakAtom(parent)
   {
     /* tkhd */
     new TkhdAtom(trak).populate({ width, height, trackId }).end()
@@ -750,8 +776,7 @@ function trakVideo (streamBox, avccOptions,
           stsd.populate({})
           const avc1 = new Avc1Atom(stsd)
           avc1.populate({ width, height })
-          const avcc = new AvcCAtom((avc1))
-          avcc.populate(avccOptions).end()
+          new AvcCAtom(avc1).populate({ codecPrivate }).end()
           avc1.end()
           stsd.end()
           new StszAtom(stbl).populate({}).end()
@@ -766,7 +791,7 @@ function trakVideo (streamBox, avccOptions,
     mdia.end()
   }
   trak.end()
-  return streamBox
+  return parent
 }
 
 /**
@@ -785,9 +810,11 @@ if (typeof module !== 'undefined') {
   module.exports =
     {
       ftyp,
+      moov,
       trakVideo,
       trexVideo,
       Box,
+      StreamBox,
       FtypAtom,
       MoovAtom,
       MvhdAtom,

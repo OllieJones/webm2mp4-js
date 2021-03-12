@@ -134,12 +134,13 @@ test('trakVideo', () => {
       type: 'video/webm; codecs="avc1.42C01E"'
     })
 
-  fmp4.trakVideo(streamBox, { avcC: codecPrivate.avcC },
+  fmp4.trakVideo(streamBox,
     {
       width: 368,
       height: 668,
       timeScale: 15000,
-      name: 'Bento4 Video Handler'
+      name: 'Bento4 Video Handler',
+      codecPrivate: codecPrivate.avcC
     })
   expect(streamBox.peek()).toEqual(trakExpected)
 })

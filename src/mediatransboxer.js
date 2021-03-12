@@ -4,20 +4,28 @@ import * as fmp4 from '../src/box.js'
 
 class MediaTransboxer {
 
-  ondataavailable = function (event) { /* stub */}
+  ondataavailable = function (ev) { /* stub */}
+  onfinish = function (ev) { /* stub */}
   firstPayload = true
   decoderOptions = {}
   type = 'video/mp4 codecs="avc1.42C01E"'
+  counts = { packets: 0, bytes: 0, blocks: 0 }
 
   constructor (options) {
     if (!options) options = {}
     if (typeof options.ondataavailable === 'function')
       this.ondataavailable = options.ondataavailable
+    if (typeof options.onfinish === 'function')
+      this.onfinish = options.onfinish
     if (typeof options.type === 'string')
       this.type = options.type
-    this.streamBuf = new fmp4.Box(null, null, { type: this.type })
+    const boxOptions = {}
+    boxOptions.type = this.type
+    if (typeof options.initialSize === 'number') boxOptions.initialSize = options.initialSize
+    this.streamBox = new fmp4.StreamBox(null, null, boxOptions)
     this.ebmlDecoder = new Decoder()
-    this.ebmlDecoder.on('data', this.debox)
+    this.ebmlDecoder.on('data', this.deboxed.bind(this))
+    this.ebmlDecoder.on('finish', this.deboxEnd.bind(this))
   }
 
   /**
@@ -25,6 +33,8 @@ class MediaTransboxer {
    * @param buffer
    */
   writeBuffer (buffer) {
+    this.counts.packets += 1
+    this.counts.bytes += buffer.byteLength
     this.ebmlDecoder.write(buffer)
   }
 
@@ -34,16 +44,19 @@ class MediaTransboxer {
    * @param event
    */
   write (event) {
-    if (!this.streamBuf) {
-    }
-
-    this.#doEvent(event).then().catch(err => throw new Error(err.message))
+    event.data.arrayBuffer()
+      .then(payload => {
+        this.ebmlDecoder.write(payload)
+        this.counts.packets += 1
+        this.counts.bytes += payload.byteLength
+      })
+      .catch(e => {
+        throw new Error(e)
+      })
   }
 
-  async #doEvent (event) {
-    const data = event.data
-    const payload = await event.data.arrayBuffer()
-    this.ebmlDecoder.write(payload)
+  end () {
+    this.ebmlDecoder.end()
   }
 
   deboxed (chunk) {
@@ -52,6 +65,7 @@ class MediaTransboxer {
       switch (name) {
 
         case 'SimpleBlock':
+          this.counts.blocks += 1
           this.handlePayload(chunk[1].payload)
           break
         case 'PixelWidth':
@@ -67,6 +81,13 @@ class MediaTransboxer {
     }
   }
 
+  /**
+   * this is provided as a way to terminate tests.
+   */
+  deboxEnd () {
+    if (typeof this.onfinish === 'function') this.onfinish(this.counts)
+  }
+
   handlePayload (payload) {
     const naluStream = new h264tools.NALUStream(payload, this.decoderOptions)
 
@@ -79,10 +100,35 @@ class MediaTransboxer {
     naluStream.convertToPacket()
 
     if (this.firstPayload) {
+      const codecPrivateData = new h264tools.AvcC({ naluStream: naluStream })
+      const options = {
+        height: this.PixelHeight,
+        width: this.PixelWidth,
+        codecPrivate: codecPrivateData.avcC
+      }
       /* ftyp / moov output */
-      const avcC = new h264tools.AvcC({ naluStream: naluStream })
+      fmp4.ftyp(this.streamBox)
+      fmp4.moov(this.streamBox, options,
+        (parent, options) => {
+          /* make each track in turn, we only have video here. */
+          options.trackId = 1
+          fmp4.trakVideo(parent, options)
+        },
+        (parent, options) => {
+          /* make each trackextension in turn, we only have video here. */
+          options.trackId = 1
+          fmp4.trexVideo(parent, options)
+        }
+      )
+      this.streamBox.flush()
 
       this.firstPayload = false
     }
+  }
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = {
+    MediaTransboxer
   }
 }
