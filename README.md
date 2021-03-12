@@ -1,4 +1,4 @@
-# webm2mp4-js [![Tests](https://github.com/OllieJones/webm2mp4-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/OllieJones/fragmented-mp4-output/actions/workflows/node.js.yml) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
+# webm2mp4-js [![Tests](https://github.com/OllieJones/webm2mp4-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/OllieJones/webm2mp4-js/actions/workflows/node.js.yml) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
 
 [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) emits
 media data stream boxed in the 
