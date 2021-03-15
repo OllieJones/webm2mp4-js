@@ -45,7 +45,7 @@ test('ftyp moov mvhd trak tkhd mdia', done => {
   const mvhd = new fmp4.MvhdAtom((moov))
   mvhd.populate({ timeScale: 1000 })
   mvhd.end()
-  const trak = new fmp4.TrakAtom(streamBox)
+  const trak = new fmp4.TrakAtom(moov)
   const tkhd = new fmp4.TkhdAtom(trak)
   tkhd.populate({ width: 368, height: 668, trackId: 2 })
   tkhd.end()
@@ -69,7 +69,7 @@ test('ftyp moov mvhd trak tkhd mdia', done => {
   const mvhd = new fmp4.MvhdAtom((moov))
   mvhd.populate({ timeScale: 1000 })
   mvhd.end()
-  const trak = new fmp4.TrakAtom(streamBox)
+  const trak = new fmp4.TrakAtom(moov)
   const tkhd = new fmp4.TkhdAtom(trak)
   tkhd.populate({ width: 368, height: 668, trackId: 2 })
   tkhd.end()
@@ -94,7 +94,7 @@ test('ftyp moov mvhd trak tkhd mdia mdhd', done => {
     const mvhd = new fmp4.MvhdAtom((moov))
     mvhd.populate({ timeScale: 1000 })
     mvhd.end()
-    const trak = new fmp4.TrakAtom(streamBox)
+    const trak = new fmp4.TrakAtom(moov)
     {
       /* tkhd */
       const tkhd = new fmp4.TkhdAtom(trak)
@@ -131,7 +131,7 @@ test('ftyp moov mvhd trak tkhd mdia mdhd hdlr', done => {
     const mvhd = new fmp4.MvhdAtom((moov))
     mvhd.populate({ timeScale: 1000 })
     mvhd.end()
-    const trak = new fmp4.TrakAtom(streamBox)
+    const trak = new fmp4.TrakAtom(moov)
     {
       /* tkhd */
       const tkhd = new fmp4.TkhdAtom(trak)
@@ -173,7 +173,7 @@ test('ftyp moov mvhd trak tkhd mdia mdhd hdlr minf vmhd', done => {
     const mvhd = new fmp4.MvhdAtom((moov))
     mvhd.populate({ timeScale: 1000 })
     mvhd.end()
-    const trak = new fmp4.TrakAtom(streamBox)
+    const trak = new fmp4.TrakAtom(moov)
     {
       /* tkhd */
       const tkhd = new fmp4.TkhdAtom(trak)

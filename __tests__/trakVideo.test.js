@@ -19,6 +19,17 @@ const mvexExpected = fmp4.Box.makeArray(
     00 00 00 00 
       `)
 
+const trexVideoExpected = fmp4.Box.makeArray(
+  `
+
+    00 00 00 20 74 72 65 78 00 00 00 00 
+    00 00 00 02 
+    00 00 00 01 
+    00 00 00 00
+    00 00 00 00 
+    00 00 00 00 
+      `)
+
 test('trex basic', () => {
   const streamBox = new fmp4.Box(null, null,
     {
@@ -40,5 +51,5 @@ test('trex convenience function', () => {
     })
 
   fmp4.trexVideo(streamBox, { trackId: 2 })
-  expect(streamBox.peek()).toEqual(mvexExpected)
+  expect(streamBox.peek()).toEqual(trexVideoExpected)
 })

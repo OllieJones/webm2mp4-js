@@ -1,6 +1,6 @@
 'use static'
 
-const Blob = require('cross-blob')
+const Blob = require('fetch-blob')
 
 /**
  * Translate webm files to fragmented MP4 version 0 files
@@ -21,11 +21,15 @@ class Box {
     this.p = {}
     this.p.buffer = new Uint8Array(initialSize + 8)
     this.p.max = this.p.buffer.byteLength
+    this.p.activeChild = undefined
     this.p.ended = false
     this.p.ptr = 0
     this.p.type = type
-    this.p.parent = parent
-    if (this.p.parent) {
+    if (parent) {
+      if (parent.p.ended) throw new Error('cannot create a child atom from an ended parent')
+      if (parent.p.activeChild) throw new Error('cannot create a new child without ending the previous one')
+      this.p.parent = parent
+      parent.p.activeChild = this
       /* leave room for the length */
       this.p.ptr = 4
       /* spit out the box name */
@@ -33,6 +37,7 @@ class Box {
     }
     this.p.length = 0
     this.p.childCount = 0
+    this.flushcount = 0
   }
 
   length () {
@@ -184,6 +189,7 @@ class Box {
       this.uint32At(this.p.ptr, 0, 'length')
       /* write the box into the parent box */
       this.p.parent.addchild(this)
+      this.p.parent.p.activeChild = undefined
       /* reset this atom for possible reuse */
       this.p.ptr = 0
       this.p.length = 0
@@ -212,17 +218,53 @@ class Box {
     if (typeof str !== 'string') str = str.join(' ')
     return new Uint8Array(str.match(/[\da-f]{2} */gi).map(s => parseInt(s, 16)))
   }
+
+  static concatArrays (arrs) {
+    let length = 0
+    for (let i = 0; i < arrs.length; i++) length += arrs[i].byteLength
+    const dest = new Uint8Array(length)
+    let p = 0
+    for (let i = 0; i < arrs.length; i++) {
+      dest.set(arrs[i], p)
+      p += arrs[i].byteLength
+    }
+    return dest
+  }
 }
 
 class StreamBox extends Box {
-  flush () {
-    if (typeof this.ondataavailable === 'function') {
-      // eslint-disable-next-line no-undef
-      const data = new Blob([this.p.buffer.subarray(0, this.p.ptr)], { type: this.p.type })
-      this.ondataavailable({ data })
-    }
+  /**
+   * end the streambox. Wreck it so it can't be reused.
+   */
+  end () {
+    if (this.p.ended) throw new Error('cannot end() an atom more than once')
+    if (this.p.parent) throw new Error('StreamBox cannot have a parent')
+    this.p.ended = true
+    this.requestData()
+    this.p = undefined
+  }
+
+  /**
+   *
+   */
+  requestData () {
+    const data = new Blob([this.p.buffer.slice(0, this.p.ptr)], { type: this.p.type })
     this.p.ptr = 0
     this.p.length = 0
+    this.flushcount++
+    if (typeof this.ondataavailable === 'function') {
+      this.ondataavailable({ flushcount: this.flushcount, data })
+    }
+  }
+
+  /**
+   * this is for testing only
+   */
+  scribble () {
+    this.uint32At(0xdeadbeef, 0, 'scribble')
+    this.uint32At(0xdeadbeef, 4, 'scribble')
+    if (this.p.ptr + 4 < this.p.max) this.uint32At(0xdeadbeef, this.p.ptr, 'scribble')
+    if (this.p.ptr + 8 < this.p.max) this.uint32At(0xdeadbeef, this.p.ptr + 4, 'scribble')
   }
 }
 
@@ -263,6 +305,10 @@ class MoovAtom extends PureContainer {
   }
 }
 
+/**
+ * Movie header
+ * See https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFChap2/qtff2.html#//apple_ref/doc/uid/TP40000939-CH204-32947
+ */
 class MvhdAtom extends Box {
   constructor (parent, options) {
     super('mvhd', parent, { initialSize: 120 })
@@ -273,23 +319,34 @@ class MvhdAtom extends Box {
     modificationTime = 0,
     timeScale = 1000,
     duration = 0,
-    rate = 0x00010000,
+    rate = 1,
     volume = 0x0100,
+    previewTime = 0,
+    previewDuration = 0,
+    posterTime = 0,
+    selectionTime = 0,
+    selectionDuration = 0,
+    currentTime = 0,
     nextTrack = 0xffffffff
   }) {
     this.uint32(0, 'flags')
     this.uint32(creationTime, 'creationTime')
     this.uint32(modificationTime, 'notificationTime')
-    this.uint32(timeScale, 'timeScale')
+    this.uint32(timeScale, 'time scale') /* ticks per second. 1000 means milliseconds */
     this.uint32(duration)
-    this.uint32(rate)
-    this.uint16(volume)
+    this.ufixed32(rate, 'playback rate') /* 1 means normal */
+    this.uint16(volume, 'volume') /* 16-bit fixed-point number */
     this.zeros(2, 'reserved1')
     this.zeros(8, 'reserved2')
     this.uint32([0x00010000, 0, 0], 'matrix')
     this.uint32([0, 0x00010000, 0])
     this.uint32([0, 0, 0x40000000])
-    this.zeros(24, 'predefined')
+    this.uint32(previewTime, 'preview time')
+    this.uint32(previewDuration, 'preview duration')
+    this.uint32(posterTime, 'poster time')
+    this.uint32(selectionTime, 'selection time')
+    this.uint32(selectionDuration, 'selection duration')
+    this.uint32(currentTime, 'current time')
     this.uint32(nextTrack, 'nextTrack')
     return this
   }
@@ -619,11 +676,10 @@ class MfhdAtom extends Box {
   }
 
   /**
-   * Each moof / mfhd must have a new sequence number
    * @param sequenceNumber
    * @returns {MfhdAtom}
    */
-  populate ({ sequenceNumber }) {
+  populate ({ sequenceNumber = 1 }) {
     this.uint32(0, 'flags')
     this.uint32(sequenceNumber, 'sequence number')
     return this
@@ -687,13 +743,14 @@ class TrunAtom extends Box {
     flags = 0x305,
     sampleCount = 1,
     dataOffset,
-    firstSampleFlags = 2000000,
+    firstSampleFlags = 0x2000000,
     sampleDuration,
     sampleSize
   }) {
     this.uint32(flags, 'flags')
     this.uint32(sampleCount, 'sample count')
     this.uint32(dataOffset, 'data offset') // TODO can we generate this?
+    this.uint32(firstSampleFlags)
     this.uint32(sampleDuration, 'sample duration')
     this.uint32(sampleSize, 'sample size, payload length of next mdat')
 
@@ -730,7 +787,7 @@ function moov (streamBox, options, makeTracks, makeTrackExtensions) {
   makeTracks(moov, options)
   /* Track Extensions (for fragmented) */
   const mvex = new MvexAtom(moov).populate()
-  new MehdAtom(moov).populate(options).end()
+  new MehdAtom(mvex).populate(options).end()
   makeTrackExtensions(mvex, options)
   mvex.end()
   moov.end()
@@ -769,11 +826,9 @@ function trakVideo (parent,
         /* Data information (stub) */
         new DinfAtom(minf).populate().end()
         /* sample table ... description of the media */
-        const stbl = new StblAtom(minf)
+        const stbl = new StblAtom(minf).populate({})
         {
-          stbl.populate({})
-          const stsd = new StsdAtom(stbl)
-          stsd.populate({})
+          const stsd = new StsdAtom(stbl).populate({})
           const avc1 = new Avc1Atom(stsd)
           avc1.populate({ width, height })
           new AvcCAtom(avc1).populate({ codecPrivate }).end()
@@ -799,11 +854,26 @@ function trakVideo (parent,
  * @param streamBox
  * @param trackId
  */
-function trexVideo (streamBox, { trackId }) {
-  const mvex = new MvexAtom(streamBox)
-  new MehdAtom(mvex).populate({}).end()
-  new TrexAtom(mvex).populate({ trackId }).end()
-  mvex.end()
+function trexVideo (parent, { trackId }) {
+  new TrexAtom(parent).populate({ trackId }).end()
+}
+
+function frame (parent, options, timestamp, duration, payload) {
+  const moof = new MoofAtom(parent)
+  new MfhdAtom(moof, {}).populate(options).end()
+  const traf = new TrafAtom(moof)
+  new TfhdAtom(traf).populate(options).end()
+  new TfdtAtom(traf).populate({ baseMediaDecodeTime: timestamp }).end()
+  const trunOptions = {
+    dataOffset: 112, // TODO HACK HACK
+    sampleDuration: duration,
+    sampleSize: payload.byteLength
+  }
+  new TrunAtom(traf).populate(trunOptions).end()
+  traf.end()
+  moof.end()
+  new MdatAtom(parent).populate({ payload }).end()
+  return parent
 }
 
 if (typeof module !== 'undefined') {
@@ -813,6 +883,7 @@ if (typeof module !== 'undefined') {
       moov,
       trakVideo,
       trexVideo,
+      frame,
       Box,
       StreamBox,
       FtypAtom,

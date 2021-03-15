@@ -120,7 +120,7 @@ test('ftyp, moov, mvhd, tkhd', done => {
   mvhd.populate({ timeScale: 1000 })
   expect(mvhd.peek()).toEqual(mdhdSample)
   mvhd.end()
-  const trak = new fmp4.TrakAtom(streamBox)
+  const trak = new fmp4.TrakAtom(moov)
   const tkhd = new fmp4.TkhdAtom(trak)
   tkhd.populate({ width: 368, height: 668, trackId: 2 })
   expect(tkhd.peek()).toEqual(tkhdSample)

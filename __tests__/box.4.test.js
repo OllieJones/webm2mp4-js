@@ -45,7 +45,7 @@ test('ftyp moov and more', done => {
     const mvhd = new fmp4.MvhdAtom((moov))
     mvhd.populate({ timeScale: 1000 })
     mvhd.end()
-    const trak = new fmp4.TrakAtom(streamBox)
+    const trak = new fmp4.TrakAtom(moov)
     {
       /* tkhd */
       const tkhd = new fmp4.TkhdAtom(trak)
@@ -119,7 +119,121 @@ test('ftyp moov and more', done => {
     trak.end()
   }
   moov.end()
-  streamBox.end()
+  expect(streamBox.peek().byteLength).toBeGreaterThan(0)
+  streamBox.requestData()
   expect(streamBox.peek().byteLength).toEqual(0)
+  streamBox.end()
+  done()
+})
+
+test('ftyp moov and more, with scribbling', done => {
+  const streamBox = new fmp4.StreamBox(null, null, { type: 'video/webm; codecs="avc1.42C01E"' })
+
+  fmp4.ftyp(streamBox)
+  streamBox.scribble()
+  const moov = new fmp4.MoovAtom(streamBox)
+  streamBox.scribble()
+  {
+    const mvhd = new fmp4.MvhdAtom((moov))
+    streamBox.scribble()
+    mvhd.populate({ timeScale: 1000 })
+    streamBox.scribble()
+    mvhd.end()
+    streamBox.scribble()
+    const trak = new fmp4.TrakAtom(moov)
+    streamBox.scribble()
+    {
+      /* tkhd */
+      const tkhd = new fmp4.TkhdAtom(trak)
+      streamBox.scribble()
+      tkhd.populate({ width: 368, height: 668, trackId: 2 })
+      streamBox.scribble()
+      tkhd.end()
+      streamBox.scribble()
+      /* mdia and subatoms */
+      const mdia = new fmp4.MdiaAtom(trak)
+      streamBox.scribble()
+      {
+        mdia.populate()
+        streamBox.scribble()
+        expect(mdia.peek()).toEqual(mdiaNewSample)
+        streamBox.scribble()
+        const mdhd = new fmp4.MdhdAtom(mdia)
+        streamBox.scribble()
+        mdhd.populate({ timeScale: 15000 })
+        streamBox.scribble()
+        expect(mdhd.peek()).toEqual(mdhdSample)
+        streamBox.scribble()
+        mdhd.end()
+        streamBox.scribble()
+        expect(mdia.peek()).toEqual(mdiaMdhdSample)
+        /* hdlr */
+        const hdlr = new fmp4.HdlrAtom(mdia)
+        hdlr.populate({ name: 'Bento4 Video Handler' })
+        expect(hdlr.peek()).toEqual(hdlrSample)
+        hdlr.end()
+        /* minf -- media information */
+        const minf = new fmp4.MinfAtom(mdia)
+        {
+          /* video media information */
+          const vmhd = new fmp4.VmhdAtom(minf)
+          vmhd.populate({})
+          vmhd.end()
+          const minfVmhdSample = fmp4.Box.makeArray(`
+            00 00 00 1c 6d 69 6e 66
+                00 00 00 14 76 6d 68 64 
+                00 00 00 01 
+                00 00 00 00 
+                00 00 00 00 `)
+          expect(minf.peek()).toEqual(minfVmhdSample)
+
+          /* Data information (stub) */
+          const dinf = new fmp4.DinfAtom(minf)
+          dinf.populate()
+          dinf.end()
+          const dinfVmhdDinfSample = fmp4.Box.makeArray(`
+              00 00 00 40 6d 69 6e 66
+                    00 00 00 14 76 6d 68 64 
+                    00 00 00 01 
+                    00 00 00 00 
+                    00 00 00 00 
+                 
+                    00 00 00 24 64 69 6e 66 
+                    
+                        00 00 00 1c 64 72 65 66
+                        00 00 00 00 
+                        00 00 00 01 
+                 
+                           00 00 00 0c 75 72 6c 20 
+                           00 00 00 01 `)
+          expect(minf.peek()).toEqual(dinfVmhdDinfSample)
+
+          /* sample table ... description of the media */
+          const stbl = new fmp4.StblAtom(minf)
+          {
+            stbl.populate()
+            const stsd = new fmp4.StsdAtom(stbl)
+            stsd.populate()
+            stsd.end()
+          }
+          streamBox.scribble()
+          stbl.end()
+        }
+        streamBox.scribble()
+        minf.end()
+      }
+      streamBox.scribble()
+      mdia.end()
+    }
+    streamBox.scribble()
+    trak.end()
+  }
+  streamBox.scribble()
+  moov.end()
+  streamBox.scribble()
+  expect(streamBox.peek().byteLength).toBeGreaterThan(0)
+  streamBox.requestData()
+  expect(streamBox.peek().byteLength).toEqual(0)
+  streamBox.end()
   done()
 })
