@@ -4,7 +4,7 @@ import { test, expect } from '@jest/globals'
 import { MediaTransboxer } from '../src/mediatransboxer'
 import * as fs from 'fs'
 import * as path from 'path'
-const Blob = require('fetch-blob')
+import { Blob } from 'blob-polyfill'
 
 const testFiles = path.join(__dirname, '__test_data__')
 const testFile = path.join(testFiles, 'test-1.webm')

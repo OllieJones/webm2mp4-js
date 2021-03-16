@@ -1,6 +1,4 @@
-'use static'
-
-const Blob = require('fetch-blob')
+import { Blob } from 'blob-polyfill'
 
 /**
  * Translate webm files to fragmented MP4 version 0 files
@@ -876,45 +874,43 @@ function frame (parent, options, timestamp, duration, payload) {
   return parent
 }
 
-if (typeof module !== 'undefined') {
-  module.exports =
-    {
-      ftyp,
-      moov,
-      trakVideo,
-      trexVideo,
-      frame,
-      Box,
-      StreamBox,
-      FtypAtom,
-      MoovAtom,
-      MvhdAtom,
-      TrakAtom,
-      TkhdAtom,
-      MdiaAtom,
-      MdhdAtom,
-      HdlrAtom,
-      MinfAtom,
-      VmhdAtom,
-      DinfAtom,
-      StblAtom,
-      StsdAtom,
-      Avc1Atom,
-      AvcCAtom,
-      StszAtom,
-      StscAtom,
-      SttsAtom,
-      StcoAtom,
-      MvexAtom,
-      MehdAtom,
-      TrexAtom,
-      MoofAtom,
-      MfhdAtom,
-      TrafAtom,
-      TfhdAtom,
-      TfdtAtom,
-      TrunAtom,
-      MdatAtom
+export
+{
+  ftyp,
+  moov,
+  trakVideo,
+  trexVideo,
+  frame,
+  Box,
+  StreamBox,
+  FtypAtom,
+  MoovAtom,
+  MvhdAtom,
+  TrakAtom,
+  TkhdAtom,
+  MdiaAtom,
+  MdhdAtom,
+  HdlrAtom,
+  MinfAtom,
+  VmhdAtom,
+  DinfAtom,
+  StblAtom,
+  StsdAtom,
+  Avc1Atom,
+  AvcCAtom,
+  StszAtom,
+  StscAtom,
+  SttsAtom,
+  StcoAtom,
+  MvexAtom,
+  MehdAtom,
+  TrexAtom,
+  MoofAtom,
+  MfhdAtom,
+  TrafAtom,
+  TfhdAtom,
+  TfdtAtom,
+  TrunAtom,
+  MdatAtom
 
-    }
 }

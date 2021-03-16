@@ -1,11 +1,10 @@
 'use strict'
 
 import { expect, test } from '@jest/globals'
-import { MediaTransboxer } from '../src/mediatransboxer'
+import { Blob } from 'blob-polyfill'
+import { MediaTransboxer } from '../dist/mediatransboxer.js'
 import * as fs from 'fs'
 import * as path from 'path'
-
-import { Blob } from 'blob-polyfill'
 
 const testFiles = path.join(__dirname, '__test_data__')
 const testFileName = 'cluster-4.webm'
@@ -14,7 +13,7 @@ const testFileSimpleBlockCount = 307
 const webmStream = fs.readFileSync(testFile)
 const outfilePath = path.join(testFiles, testFileName + '.mp4')
 
-test('transbox from bundle: handle timestamps', done => {
+test('transbox handle timestamps', done => {
   const transboxer = new MediaTransboxer({ type: 'video/mp4; codecs="avc1.42C01E"' })
   const blobs = []
 

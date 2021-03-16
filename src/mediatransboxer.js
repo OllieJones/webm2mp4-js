@@ -1,29 +1,34 @@
 import * as h264tools from 'h264-interp-utils'
 import { Decoder } from 'ebml'
 import * as fmp4 from '../src/box.js'
+import { Blob } from 'blob-polyfill'
 
-class MediaTransboxer {
-  decoderOptions = {}
-  webmValues = {}
-  webmPath = []
-  ondataavailable = function (ev) { /* stub */}
-  onfinish = function (ev) { /* stub */}
-  firstPayload = true
-  type = 'video/mp4 codecs="avc1.42C01E"'
-  counts = { packets: 0, bytes: 0, blocks: 0 }
-  timecodeScale = 1 /* milliseconds per clock tick */
-  clusterTimecode = 0
-  writeInProgress = 0
-  previousSampleTime = 0
-
+export class MediaTransboxer {
   constructor (options) {
+    /* instance props */
+    this.decoderOptions = {}
+    this.webmValues = {}
+    this.webmPath = []
+    this.ondataavailable = function (ev) { /* stub */ }
+    this.onfinish = function (ev) { /* stub */ }
+    this.firstPayload = true
+    this.type = 'video/mp4 codecs="avc1.42C01E"'
+    this.counts = { packets: 0, bytes: 0, blocks: 0 }
+    this.timecodeScale = 1 /* milliseconds per clock tick */
+    this.clusterTimecode = 0
+    this.writeInProgress = 0
+    this.previousSampleTime = 0
+    /* ctor logic */
     if (!options) options = {}
-    if (typeof options.ondataavailable === 'function')
+    if (typeof options.ondataavailable === 'function') {
       this.ondataavailable = options.ondataavailable
-    if (typeof options.onfinish === 'function')
+    }
+    if (typeof options.onfinish === 'function') {
       this.onfinish = options.onfinish
-    if (typeof options.type === 'string')
+    }
+    if (typeof options.type === 'string') {
       this.type = options.type
+    }
     const boxOptions = {}
     boxOptions.type = this.type
     if (typeof options.initialSize === 'number') boxOptions.initialSize = options.initialSize
@@ -109,7 +114,6 @@ class MediaTransboxer {
     else if (chunk[0] === 'tag') {
       const pathname = this.webmPath.join('.') + '.' + name
       switch (name) {
-
         case 'SimpleBlock':
           this.counts.blocks += 1
           this.handlePayload(chunk[1])
@@ -124,7 +128,7 @@ class MediaTransboxer {
         case 'TimecodeScale':
           /* in webm, this value is in nanoseconds per clock tick
            * and we want it in milliseconds */
-          this.timecodeScale = 1_000_000 / chunk[1].value
+          this.timecodeScale = 1000000 / chunk[1].value
           this.webmValues[pathname] = chunk[1].value
           break
         case 'Timecode':
@@ -133,9 +137,7 @@ class MediaTransboxer {
           this.webmValues[pathname] = chunk[1].value
           break
         default:
-          if (chunk[1].value)
-            this.webmValues[pathname] = chunk[1].value
-
+          if (chunk[1].value) { this.webmValues[pathname] = chunk[1].value }
       }
     }
   }
@@ -187,11 +189,5 @@ class MediaTransboxer {
     fmp4.frame(this.streamBox, options, timestamp, 75, naluStream.buf)
     this.previousSampleTime = timestamp
     this.streamBox.requestData()
-  }
-}
-
-if (typeof module !== 'undefined') {
-  module.exports = {
-    MediaTransboxer
   }
 }
