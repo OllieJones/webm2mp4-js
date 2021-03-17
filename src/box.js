@@ -1,4 +1,4 @@
-import { Blob } from 'blob-polyfill'
+// TODO this is no good for rollup??? wtf??? import { Blob } from 'blob-polyfill'
 /**
  * Translate webm files to fragmented MP4 version 0 files
  * a/k/a QuickTime files.

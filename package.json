@@ -7,11 +7,7 @@
     "test": "__tests__"
   },
   "scripts": {
-    "test": "jest",
-    "build": "rollup --config",
-    "prepublish": "check-node-version --npm \">=4\" || npm run prepare",
-    "prepare": "npm run build",
-    "prepublishOnly": "NODE_ENV=production npm run build"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
