@@ -1,6 +1,6 @@
 {
   "name": "webm2mp4-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert webm data streams containing h.264 video to fragmented mp4",
   "main": "src/mediatransboxer.js",
   "directories": {
@@ -54,7 +54,7 @@
     "buffer": "^6.0.3",
     "core-js": "^3.9.1",
     "ebml": "^3.0.0",
-    "h264-interp-utils": "^1.0.5",
+    "h264-interp-utils": "file:..\\h264-interp-utils",
     "regenerator-runtime": "^0.11.1",
     "stream-browserify": "^3.0.0"
   }
