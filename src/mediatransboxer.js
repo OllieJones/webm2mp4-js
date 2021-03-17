@@ -1,7 +1,6 @@
 import * as h264tools from 'h264-interp-utils'
-import { Decoder } from 'ebml'
+import * as ebml from 'ebml'
 import * as fmp4 from '../src/box.js'
-import { Blob } from 'blob-polyfill'
 
 export class MediaTransboxer {
   constructor (options) {
@@ -33,7 +32,7 @@ export class MediaTransboxer {
     boxOptions.type = this.type
     if (typeof options.initialSize === 'number') boxOptions.initialSize = options.initialSize
     this.streamBox = new fmp4.StreamBox(null, null, boxOptions)
-    this.ebmlDecoder = new Decoder()
+    this.ebmlDecoder = new ebml.Decoder()
     this.ebmlDecoder.on('data', this.deboxed.bind(this))
     this.ebmlDecoder.on('finish', this.deboxEnd.bind(this))
 
@@ -63,12 +62,15 @@ export class MediaTransboxer {
    * @returns {Promise<ArrayBuffer>|ArrayBuffer}
    */
   arrayBufferFromBlob (blob) {
-    if (typeof process !== 'object') {
-      /* browser, braindamage in older Safari */
-      return Response.prototype.arrayBuffer.call(blob)
-    } else {
+    if (typeof process === 'object') {
+      // eslint-disable-next-line no-useless-call
       return blob.arrayBuffer.call(blob)
     }
+    /* browser, braindamage in older Safari */
+    if (window.Blob && typeof window.Blob.prototype.arrayBuffer === 'function') {
+      return window.Blob.prototype.arrayBuffer().call(blob)
+    }
+    return window.Response.prototype.arrayBuffer.call(blob)
   }
 
   /**

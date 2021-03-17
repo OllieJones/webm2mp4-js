@@ -1,10 +1,7 @@
-'use strict'
-
 import { expect, test } from '@jest/globals'
 import { MediaTransboxer } from '../src/mediatransboxer'
 import * as fs from 'fs'
 import * as path from 'path'
-
 import { Blob } from 'blob-polyfill'
 
 const testFiles = path.join(__dirname, '__test_data__')
