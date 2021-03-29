@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transbox test -- gUM to MSE</title>
+</head>
+<body>
+
+<video id="a" width="352" height="288" muted></video>
+<video id="b" width="352" height="288" muted></video>
+
+<script type="application/javascript" src="../index.js"></script>
+<script>
+  const DEBUG = 0
+
+  // noinspection JSUnusedLocalSymbols
+  async function doApplication (event) {
+    const previewElement = document.querySelector('video#a')
+    const targetElement = document.querySelector('video#b')
+
+    // const codec_string = 'avc1.42C01E'
+    // const codec_string = 'vp9'
+    // let codec_string = 'avc1.42C01E'
+    // let codec_string = 'avc1.4D401E'
+    const codec_string = 'avc1.64001E'
+    // let codec_string = 'vp8'
+
+    /*  const constraints = {
+        video: {
+          width: { ideal: 640 },
+          height: { ideal: 480 },
+        },
+        audio: false
+      }
+      const recorderOptions = {
+        videoBitsPerSecond: 500_000,
+        mimeType: `video/mp4;codecs="${codec_string}"`
+      }*/
+    const constraints = {
+      video: {
+        frameRate: { max: 30, min: 5, ideal: 15 },
+        width: { max: 704, min: 176, ideal: 352 },
+        height: { max: 576, min: 144, ideal: 288 },
+      }
+    }
+    const recorderOptions = {
+      videoBitsPerSecond: 500_000,
+      mimeType: `video/mp4;codecs="${codec_string}"`
+    }
+
+    encodedStream(constraints, recorderOptions, previewElement, targetElement).then().catch(console.error)
+
+    function catBuffers (array) {
+      let len = 0
+      for (let i = 0; i < array.length; i++) len += array[i].byteLength
+      const result = new Uint8Array(len)
+      let p = 0
+      for (let i = 0; i < array.length; i++) {
+        result.set(array[i], p)
+        p += array[i].byteLength
+      }
+      return result
+    }
+
+    /**
+     * generate a recorder stream.
+     * @param constraints guM constraints
+     * @param recorderOptions MediaRecorder options
+     * @param preview preview video element
+     * @param target
+     */
+    async function encodedStream (constraints, recorderOptions, preview, target) {
+      const stream = await navigator.mediaDevices.getUserMedia(constraints)
+      const recorder = new webmtomp4.TransboxingMediaRecorder(stream, recorderOptions)
+
+      const mediaSource = new MediaSource()
+      target.src = URL.createObjectURL(mediaSource)
+      target.play()
+
+      let mostRecentSeek = Date.now()
+
+      function seekToEnd (target, threshold = 0, seekFrequencyThreshold = 60) {
+        if (target.seekable && target.seekable.length > 0) {
+          const now = Date.now()
+          const latestTime = target.seekable.end(target.seekable.length - 1)
+          const currentTime = target.currentTime
+          const overThreshold = (latestTime - currentTime) > threshold
+          const overFrequencyThreshold = (now - mostRecentSeek) > (seekFrequencyThreshold * 1000)
+          if (threshold === 0 || (overThreshold && overFrequencyThreshold)) {
+            target.currentTime = latestTime
+            mostRecentSeek = now
+          }
+        }
+      }
+
+      target.addEventListener('play', () => {
+        /* The video element gets an
+         *   implicit .pause() when the page
+         *   gets hidden behind something,
+         *   and an implicit play()
+         *   when revealed. This prevents
+         *   a lot of delay from accumulating.
+         */
+        seekToEnd(target, 0)
+      })
+
+      /* source buffer stuff */
+      let sourceBuffer
+      mediaSource.addEventListener('sourceopen', () => {
+        sourceBuffer = mediaSource.addSourceBuffer(recorderOptions.mimeType)
+        /* see https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode */
+        sourceBuffer.mode = 'sequence'
+        sourceBuffer.locals = {}
+        sourceBuffer.locals.inactive = true
+        sourceBuffer.locals.appendCount = 0
+        sourceBuffer.onupdateend = updateEventHandler
+        target.play()
+        sourceBuffer.onerror = ev => {
+          console.error(ev)
+        }
+      })
+
+      let savedBuffers = []
+      recorder.ondataavailable = function (ev) {
+        ev.data.arrayBuffer()
+            .then(arrayBuffer => {
+              savedBuffers.push(arrayBuffer)
+              if (sourceBuffer.locals.inactive) updateEventHandler()
+            })
+      }
+
+      function updateEventHandler () {
+        let buff
+        if (savedBuffers.length === 1) {
+          buff = savedBuffers[0]
+        } else {
+          buff = catBuffers(savedBuffers)
+        }
+        savedBuffers = []
+        sourceBuffer.locals.inactive = false
+        sourceBuffer.locals.appendCount += 1
+        sourceBuffer.appendBuffer(buff)
+        seekToEnd(target, 0.5)
+      }
+
+      preview.srcObject = stream
+      preview.play()
+      recorder.start(10)
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', doApplication)
+
+</script>
+</body>
+</html>
