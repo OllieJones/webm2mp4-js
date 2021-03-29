@@ -1,4 +1,5 @@
-// TODO this is no good for rollup??? wtf??? import { Blob } from 'blob-polyfill'
+import { Blob } from 'blob-polyfill'
+
 /**
  * Translate webm files to fragmented MP4 version 0 files
  * a/k/a QuickTime files.
@@ -35,6 +36,7 @@ class Box {
     this.p.length = 0
     this.p.childCount = 0
     this.flushcount = 0
+    this.bufferChunkSize = 1_000_000
   }
 
   length () {
@@ -174,10 +176,11 @@ class Box {
     if (this.p.ended) throw new Error('cannot end() an atom more than once')
     this.p.ended = true
     if (!this.p.parent) {
+      const frag = this.p.buffer.subarray(0, this.p.ptr)
+      if (typeof this.onbufferavailable === 'function') this.onbufferavailable(frag)
       if (typeof this.ondataavailable === 'function') {
-        // eslint-disable-next-line no-undef
-        const data = new Blob([this.p.buffer.subarray(0, this.p.ptr)], { type: this.p.type })
-        this.ondataavailable({ data })
+        const data = new Blob([frag], { type: this.type })
+        this.ondataavailable({ data, flushcount: this.flushcount })
       }
       this.p.ptr = 0
       this.p.length = 0
@@ -245,12 +248,22 @@ class StreamBox extends Box {
    *
    */
   requestData () {
-    const data = new Blob([this.p.buffer.slice(0, this.p.ptr)], { type: this.p.type })
+    let ptr = 0
+    const max = this.p.ptr
+    const data = this.p.buffer.slice(ptr, max)
     this.p.ptr = 0
     this.p.length = 0
     this.flushcount++
-    if (typeof this.ondataavailable === 'function') {
-      this.ondataavailable({ flushcount: this.flushcount, data })
+    while (ptr < max) {
+      let end = ptr + this.bufferChunkSize
+      if (end >= max) end = max
+      const frag = data.subarray(ptr, end)
+      if (typeof this.onbufferavailable === 'function') this.onbufferavailable(frag)
+      if (typeof this.ondataavailable === 'function') {
+        const data = new Blob([frag], { type: this.type })
+        this.ondataavailable({ data, flushcount: this.flushcount })
+      }
+      ptr = end
     }
   }
 

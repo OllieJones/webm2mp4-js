@@ -1,5 +1,5 @@
 import * as h264tools from 'h264-interp-utils'
-import * as ebml from 'ebml'
+import { Decoder } from 'ebml'
 import * as fmp4 from '../src/box.js'
 
 export class MediaTransboxer {
@@ -32,7 +32,7 @@ export class MediaTransboxer {
     boxOptions.type = this.type
     if (typeof options.initialSize === 'number') boxOptions.initialSize = options.initialSize
     this.streamBox = new fmp4.StreamBox(null, null, boxOptions)
-    this.ebmlDecoder = new ebml.Decoder()
+    this.ebmlDecoder = new Decoder()
     this.ebmlDecoder.on('data', this.deboxed.bind(this))
     this.ebmlDecoder.on('finish', this.deboxEnd.bind(this))
 
@@ -56,24 +56,7 @@ export class MediaTransboxer {
     }
   }
 
-  /**
-   *
-   * @param blob
-   * @returns {Promise<ArrayBuffer>|ArrayBuffer}
-   */
-  arrayBufferFromBlob (blob) {
-    if (typeof process === 'object') {
-      // eslint-disable-next-line no-useless-call
-      return blob.arrayBuffer.call(blob)
-    }
-    /* browser, braindamage in older Safari */
-    if (window.Blob && typeof window.Blob.prototype.arrayBuffer === 'function') {
-      return window.Blob.prototype.arrayBuffer().call(blob)
-    }
-    return window.Response.prototype.arrayBuffer.call(blob)
-  }
-
-  /**
+  /*
    * This function is useful as
    * ondataavailable for MediaRecorder
    * @param event
@@ -81,7 +64,7 @@ export class MediaTransboxer {
   write (event) {
     this.writeInProgress++
     /* portable conversion of Blob to arrayBuffer */
-    this.arrayBufferFromBlob(event.data)
+    event.data.arrayBuffer()
       .then(arrayBuffer => {
         this.ebmlDecoder.write(Buffer.from(arrayBuffer))
         this.counts.packets += 1
