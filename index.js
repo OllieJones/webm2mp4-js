@@ -1,4 +1,4 @@
-window.webmtomp4 = (function () {
+module.exports = (function () {
   function EbmlDecoder (options) {
     // noinspection JSUnusedAssignment
     /** ********* constructor ***************/
